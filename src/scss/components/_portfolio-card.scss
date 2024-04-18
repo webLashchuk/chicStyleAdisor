@@ -1,0 +1,49 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.portfolio-card {
+  position: relative;
+  width: 100%;
+
+  h3 {
+    font-size: 30px;
+    margin: 0 auto 30px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.65;
+  }
+
+  p,
+  h3 {
+    color: var(--color-white);
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    min-height: 728px;
+    object-fit: cover;
+  }
+
+  &__content {
+    position: absolute;
+    max-width: 678px;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 32px;
+    overflow: hidden;
+    border-radius: calc(var(--radius-main) - 4px);
+
+    &:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, .5);
+      backdrop-filter: blur(5px);
+      z-index: -1;
+    }
+  }
+}

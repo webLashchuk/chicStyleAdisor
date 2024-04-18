@@ -1,0 +1,56 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.grid {
+  $root: &;
+  display: grid;
+
+
+  @include media(tablet-wide) {
+    gap: 20px;
+  }
+
+  @include media(mobile-m) {
+    gap: 60px;
+  }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+    justify-content: space-between;
+  }
+
+  &[data-items="1"] {
+    --column: 2;
+    max-width: 955px;
+    gap: 67px 120px;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    grid-template-columns: repeat(var(--column), 430px);
+
+    @include media(tablet) {
+      --column: 2;
+    }
+
+    @include media(mobile-m) {
+      --column: 1;
+    }
+  }
+
+  &[data-items="2"] {
+    --column: 3;
+    margin: 0 auto;
+    gap: 35px;
+
+    grid-template-columns: repeat(var(--column), 1fr);
+
+    @include media(tablet) {
+      --column: 2;
+    }
+
+    @include media(mobile-m) {
+      --column: 1;
+    }
+  }
+}

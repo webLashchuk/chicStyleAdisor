@@ -1,0 +1,12 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.blog {
+  h2 {
+    margin-bottom: 32px;
+
+    +P {
+      max-width: 1265px;
+    }
+  }
+}

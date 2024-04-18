@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Home"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+
+    <include src="./html/_header.html" locals='{"page": "home"}'></include>
+
+    <main class="main">
+
+      <include src="./html/_hero.html">
+        {
+        "addClass":"",
+        "addOverlay":"overlay",
+        "image":"hero.jpg",
+        "text":"Elevate Your Style with Sharlotte Sinclair",
+        "titleNormal":"Your Personal",
+        "titleItalic":"Style Journey",
+        "btnClass":""
+        }
+      </include>
+
+      <include src="./html/_about.html">
+        {
+        "class":"",
+        "btnClass":"btn--more"
+        }
+      </include>
+
+      <include src="./html/home/_services.html"></include>
+
+      <include src="./html/_portfolio.html">
+        {
+        "title":"Portfolio",
+        "text":"Unveil our curated portfolio, showcasing remarkable style transformations and bespoke fashion journeys.
+        Each captivating image serves as a gateway to discover the intricate details of our esteemed client projects and
+        success stories."
+        }
+      </include>
+
+      <include src="./html/_blog.html">
+        {
+        "title":"Blog",
+        "text":"Immerse yourself in a curated collection of our most remarkable projects, showcasing our expertise and
+        creativity in personal styling. Explore the transformative journeys of our clients and get inspired by the
+        innovative solutions we've crafted to enhance their personal style and confidence."
+        }
+      </include>
+
+      <include src="./html/home/_testimonials.html"></include>
+
+      <include src="./html/_contact.html"></include>
+
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>

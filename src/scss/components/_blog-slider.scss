@@ -1,0 +1,43 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.blog-slider {
+  position: relative;
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    bottom: 200px;
+    top: auto;
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, .5);
+    backdrop-filter: blur(5px);
+    border-radius: calc(var(--radius-main) * 8 - 4px);
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background-image: var(--arrow);
+      filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(220deg) brightness(107%) contrast(101%);
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+  }
+
+  .swiper-button-next {
+    right: 76px;
+  }
+
+  .swiper-button-prev {
+    left: 76px;
+
+    &::before {
+      content: "";
+      transform: translateY(-50%) translateX(-50%) rotate(180deg);
+    }
+  }
+}

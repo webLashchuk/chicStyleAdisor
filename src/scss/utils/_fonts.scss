@@ -1,0 +1,5 @@
+@use "./mixins/font-face"as *;
+
+@include font-ttf("Kally dreams", "../fonts/Kally-dreams", 400, normal);
+@include font-woff("Kally dreams", "../fonts/Kally-dreams", 400, normal);
+@include font-woff2("Kally dreams", "../fonts/Kally-dreams", 400, normal);

@@ -1,0 +1,84 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+html,
+body {
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+}
+
+.page {
+  font-family: var(--font-family-primary);
+  font-weight: var(--fw-400);
+  font-style: normal;
+  font-size: clamp(16px, 1vw, 20px);
+  line-height: 1.4;
+  color: var(--color-brown-600);
+  background-color: var(--color-yellow-100);
+  font-optical-sizing: auto;
+
+  &__body {
+    min-width: 320px;
+    min-height: var(--vh);
+  }
+
+  &.open {
+    overflow: hidden;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  width: 100%;
+  max-width: var(--container-width);
+}
+
+.site-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr auto;
+  min-height: var(--vh);
+}
+
+.overlay {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    background: var(--gradient);
+    inset: 0;
+  }
+}
+
+.logo {
+  max-width: 324px;
+  width: 100%;
+  transition: filter .3s;
+
+  img {
+    width: 100%;
+  }
+
+  @include media(tablet-wide) {
+    max-width: 150px;
+  }
+
+  @include media(mobile-l) {
+    max-width: 100px;
+  }
+}
+
+.section {
+  padding-block: rem(65);
+
+  @include media(tablet) {
+    padding-block: rem(60);
+  }
+}
+
+.hide {
+  display: none;
+}

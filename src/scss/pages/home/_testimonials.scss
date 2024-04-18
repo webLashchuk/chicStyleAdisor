@@ -1,0 +1,15 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.testimonials {
+  text-align: center;
+
+  h2 {
+    margin: 0 auto 19px;
+  }
+
+  h2,
+  p {
+    padding: 0;
+  }
+}

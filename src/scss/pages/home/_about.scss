@@ -1,0 +1,59 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.about {
+  &__inner {
+    display: flex;
+    justify-items: flex-end;
+    flex-direction: column;
+    background-position: leftcenter;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 967px;
+  }
+
+  &__content {
+    @include flex;
+    text-align: right;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 660px;
+    margin-left: auto;
+    padding-inline: 48px;
+    margin-bottom: 32px;
+  }
+
+  span {
+    text-align: right;
+    color: var(--color-gray);
+    display: inline-block;
+    font-family: "Kally dreams", sans-serif;
+    font-size: 128px;
+    margin-bottom: 20px;
+    z-index: -1;
+  }
+
+  h2 {
+    text-align: right;
+    margin-bottom: 32px;
+  }
+
+  p {
+    letter-spacing: 0.025em;
+    margin-bottom: 33px;
+  }
+
+  &--about-me {
+    span {
+      margin-bottom: 45px;
+    }
+
+    h2 {
+      margin-bottom: 60px;
+    }
+
+    .about__content {
+      max-width: 710px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "About Me"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+
+    <include src="./html/_header.html" locals='{"page": "about"}'></include>
+
+    <main class="main">
+
+      <include src="./html/_hero-secondary.html">
+        {
+        "image":"about/hero.jpg",
+        "titleNormal":"Welcome to my",
+        "titleItalic":"world of style!",
+        "text":"I'm thrilled you've stopped by to learn more about me and my passion for personal styling. It's an honor
+        to share my journey with you, where fashion meets empowerment, and confidence is the ultimate accessory. Let's
+        embark on this stylish adventure together!"
+        }
+      </include>
+
+      <include src="./html/_about.html">
+        {
+        "class":"about--about-me",
+        "btnClass":"sr-only"
+        }
+      </include>
+
+      <include src="./html/_contact.html"></include>
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>

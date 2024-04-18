@@ -1,0 +1,65 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+h1,
+h2,
+h3 {
+  overflow: hidden;
+  width: fit-content;
+  font-size: 20px;
+  font-weight: var(--fw-400);
+  font-family: var(--font-family-primary);
+  color: var(--color-black);
+}
+
+h1 {
+  font-family: "Playfair Display", sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 0.01em;
+  font-size: 100px;
+
+  @include media(mobile-l) {
+    font-size: 34px;
+  }
+}
+
+h2,
+.title {
+  font-family: var(--font-family-secondary);
+  text-transform: uppercase;
+  font-size: 52px;
+  line-height: 1.35;
+  text-align: left;
+  color: inherit;
+  padding-left: 45px;
+  margin-bottom: 14px;
+
+  @include media(tablet) {
+    font-size: 42px;
+  }
+
+  @include media(mobile-m) {
+    font-size: 28px;
+  }
+
+  +p {
+    padding-left: 45px;
+    letter-spacing: 0.03em;
+    margin-bottom: 64px;
+  }
+}
+
+h3 {
+  font-family: var(--font-family-secondary);
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.65;
+  letter-spacing: 0.03em;
+  font-weight: var(--fw-400);
+  color: var(--color-black);
+}

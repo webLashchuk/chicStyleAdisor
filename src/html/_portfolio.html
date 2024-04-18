@@ -1,0 +1,66 @@
+<section class="section portfolio">
+  <div class="container">
+
+    <h2>
+      {{title}}
+    </h2>
+
+    <p>
+      {{text}}
+    </p>
+
+  </div>
+
+  <div class="portfolio-slider swiper">
+    <ul class="portfolio-slider__list swiper-wrapper">
+
+      <li class="portfolio-slider__item swiper-slide">
+        <include src="html/_portfolio-card.html">
+          {
+          "image":"casual.jpg",
+          "alt":"Casual to chic",
+          "title":"Casual to chic",
+          "text":"Transforming the client's style from laid-back to chic, we curated versatile outfits combining
+          classic staples with modern flair. Addressing the challenge of maintaining comfort while achieving elegance,
+          our
+          styling approach resulted in effortlessly stylish looks suitable for various occasions."
+          }
+        </include>
+      </li>
+
+      <li class="portfolio__item swiper-slide">
+        <include src="html/_portfolio-card.html">
+          {
+          "image":"elegance.jpg",
+          "alt":"Business Casual Elegance",
+          "title":"Business Casual Elegance",
+          "text":"Elevating the client's style with sophisticated business attire, blending tailored pieces with
+          contemporary accents. Overcoming the challenge of transitioning from a mundane office wardrobe to a polished
+          and
+          professional ensemble, we infused confidence into their workplace presence."
+          }
+        </include>
+      </li>
+
+      <li class="portfolio__item swiper-slide">
+        <include src="html/_portfolio-card.html">
+          {
+          "image":"glam.jpg",
+          "alt":"From Day to Night Glam",
+          "title":"From Day to Night Glam",
+          "text":"Crafting sophisticated day-to-night ensembles, we balanced practicality with glamour, ensuring the
+          client's wardrobe meets the demands of their dynamic lifestyle. Overcoming the challenge of creating versatile
+          looks suitional meetings and social gatherings, our styling expertise delivered versatile and elegant
+          solutions."
+          }
+        </include>
+      </li>
+
+    </ul>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+  </div>
+
+</section>

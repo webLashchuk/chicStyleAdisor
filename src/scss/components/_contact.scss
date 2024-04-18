@@ -1,0 +1,159 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.contact {
+  &__top {
+    position: relative;
+    @include cover-background;
+    padding-block: 95px 90px;
+
+    &.overlay {
+      &::before {
+        content: "";
+        background: var(--contact-gradient);
+      }
+    }
+  }
+
+  .container {
+    max-width: 1290px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__inner {
+    color: var(--color-white);
+    max-width: 490px;
+    z-index: 1;
+    font-size: 20px;
+  }
+
+  h2 {
+    margin-bottom: 5px;
+
+    +p {
+      margin-bottom: 67px;
+    }
+  }
+
+  h2,
+  p {
+    padding: 0;
+  }
+
+  p,
+  a {
+    color: var(--color-white);
+  }
+
+  a {
+    font-weight: var(--fw-500);
+  }
+
+  span {
+    display: block;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 83px;
+    @include pseudo-vertical;
+
+    &::before,
+    &::after {
+      @include contain-background;
+    }
+
+    &::before {
+      background-color: var(--color-white);
+      width: 67px;
+      height: 67px;
+      left: 0;
+    }
+
+    &::after {
+      width: 36px;
+      height: 36px;
+      left: 15px;
+    }
+
+    &--phone {
+      &::after {
+        background-image: url('../images/icons/phone.png');
+      }
+    }
+
+    &--mail {
+      &::after {
+        background-image: url('../images/icons/mail.png');
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__form {
+    max-width: 600px;
+    padding: 40px;
+    width: 100%;
+    background-color: var(--color-white);
+    z-index: 1;
+    line-height: 1;
+  }
+
+  &__label {
+    display: inline-block;
+    width: 100%;
+
+    &--short {
+      max-width: 250px;
+      width: 100%;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 25px;
+    }
+
+    &:nth-child(3) {
+      margin-right: 15px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 35px;
+    }
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid var(--color-black);
+    padding-block: 8px 10px;
+
+    &::placeholder {
+      font-weight: var(--fw-500);
+      color: var(--color-black);
+      font-size: 20px;
+    }
+  }
+
+  textarea {
+    min-height: 191px;
+    resize: vertical;
+  }
+
+  img {
+    width: 100%;
+    min-height: 470px;
+  }
+
+  .btn {
+    margin: 0 auto;
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,38 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.footer {
+  font-size: 18px;
+  background-color: var(--color-dark);
+
+  &__top {
+    padding-block: 33px;
+  }
+
+  .copyright {
+    font-size: 16px;
+    font-weight: var(--fw-300);
+
+    @include media(mobile-s) {
+      max-width: 250px;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+
+  &__bottom {
+    background-color: var(--color-black);
+    padding-block: 30px;
+
+    p {
+      color: var(--color-white);
+      font-family: "Inter", sans-serif;
+      font-size: 16px;
+      letter-spacing: 0;
+    }
+  }
+
+  &__wrapper {
+    @include flex-all-sb;
+  }
+}

@@ -1,0 +1,38 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.testimonial-card {
+  padding: 16px;
+  @include flex-v-center;
+  flex-direction: column;
+  text-align: center;
+
+  h3 {
+    width: 100%;
+    font-size: 30px;
+    line-height: 1.35;
+    margin-bottom: 20px;
+  }
+
+  blockquote {
+    margin-bottom: 32px;
+    font-size: 18px;
+    line-height: 1.65;
+    letter-spacing: 0.02em;
+  }
+
+  img {
+    width: 76px;
+    height: 76px;
+    border-radius: calc(var(--radius-main) * 8 - 4px);
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 15px;
+  }
+
+  span {
+    font-size: 24px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+}

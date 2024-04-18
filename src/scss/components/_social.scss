@@ -1,0 +1,43 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.social {
+  @include flex-v-center;
+
+  &__item {
+    margin-right: 30px;
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    @include contain-background;
+
+    &--facebook {
+      background-image: var(--facebook);
+
+    }
+
+    &--twitter {
+      background-image: var(--twitter);
+
+    }
+
+    &--instagram {
+      background-image: var(--instagram);
+
+    }
+
+    &--pinterest {
+      background-image: var(--pinterest);
+
+    }
+
+    &--linkedin {
+      background-image: var(--linkedin);
+
+    }
+  }
+}
