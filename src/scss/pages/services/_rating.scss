@@ -1,0 +1,46 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.rating {
+  transform: translateY(75px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 68px;
+  gap: 16px;
+
+  &::before {
+    @include pseudo;
+    @include contain-background;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 48;
+    height: 48;
+  }
+
+  &--google {
+    &::before {
+      background-image: url('../images/icons/google.svg');
+    }
+  }
+
+  &--tripadvisor {
+    &::before {
+      background-image: url('../images/icons/tripadvisor.svg');
+    }
+  }
+
+  &__owner {
+    font-size: 24px;
+    font-family: var(--font-family-secondary);
+    text-transform: uppercase;
+  }
+
+  &__count {
+    font-size: 100px;
+    font-family: "Playfair Display", sans-serif;
+    line-height: 1;
+    font-weight: var(--fw-500);
+  }
+}

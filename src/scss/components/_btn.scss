@@ -36,6 +36,15 @@
     }
   }
 
+  &--hero {
+    background-color: transparent !important;
+    color: var(--color-white) !important;
+
+    &:hover {
+      background-color: var(--color-white) !important;
+    }
+  }
+
   &--order {
     &:hover {
       background-color: transparent;
@@ -59,5 +68,9 @@
       background-color: var(--color-white);
       color: var(--color-black);
     }
+  }
+
+  &.hide {
+    display: none;
   }
 }

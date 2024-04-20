@@ -16,6 +16,7 @@ body {
   color: var(--color-brown-600);
   background-color: var(--color-yellow-100);
   font-optical-sizing: auto;
+  font-variant-numeric: lining-nums;
 
   &__body {
     min-width: 320px;
@@ -45,11 +46,17 @@ body {
   position: relative;
 
   &::before {
-    content: "";
-    position: absolute;
+    @include pseudo;
     z-index: 1;
     background: var(--gradient);
     inset: 0;
+  }
+
+  &--blog {
+    &::before {
+      background: none;
+      background-color: rgba(0, 0, 0, .5);
+    }
   }
 }
 

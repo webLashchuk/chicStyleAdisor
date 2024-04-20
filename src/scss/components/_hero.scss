@@ -98,7 +98,7 @@
     }
 
     h1 {
-      max-width: 952px;
+      max-width: 850px;
       margin-bottom: 140px;
       line-height: 1;
       overflow: visible;
@@ -148,6 +148,14 @@
 
   .btn {
     font-size: 28px;
+  }
+
+  &--blog {
+    padding-top: rem(0);
+
+    .hero__inner {
+      padding-top: rem(159);
+    }
   }
 
   @include media(tablet) {

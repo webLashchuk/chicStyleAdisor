@@ -5,11 +5,27 @@
   text-align: center;
 
   h2 {
-    margin: 0 auto 19px;
+    margin: 0 auto 20px;
+
+    +p {
+      margin: 0 auto 65px;
+    }
   }
 
   h2,
   p {
+    max-width: 600px;
     padding: 0;
+  }
+
+
+
+  &--services {
+    .grid {
+
+      p {
+        font-size: 18px;
+      }
+    }
   }
 }

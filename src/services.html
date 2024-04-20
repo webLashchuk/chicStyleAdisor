@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Services"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+
+    <include src="./html/_header.html" locals='{"page": "services"}'></include>
+
+    <main class="main">
+
+      <include src="./html/_hero-secondary.html">
+        {
+        "image":"services/hero.jpg",
+        "titleNormal":"Unlock Your",
+        "titleItalic":"Style Potential",
+        "text":"Welcome to my world of personalized style solutions tailored just for you. At our service hub, I
+        understand that every individual is unique, and so are their style needs. My comprehensive range of services is
+        designed to cater to your distinct preferences, ensuring you step into your best self confidently and
+        authentically."
+        }
+      </include>
+
+      <include src="./html/services/_service.html"></include>
+
+      <include src="./html/services/_testimonials-services.html"></include>
+
+      <include src="./html/_contact.html"></include>
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>

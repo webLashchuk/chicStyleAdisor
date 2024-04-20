@@ -1,0 +1,45 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.feature {
+
+  p,
+  h2 {
+    padding: 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    &--reverse {
+      img {
+        order: 1;
+      }
+
+      h2 {
+        width: 100%;
+        text-align: right;
+      }
+
+      .feature__content {
+        order: 2;
+        text-align: right;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 128px;
+    }
+  }
+
+  &__content {
+    max-width: 620px;
+  }
+
+  img {
+    max-width: 560px;
+    width: 100%;
+    min-height: 700px;
+  }
+}

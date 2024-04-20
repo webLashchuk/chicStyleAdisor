@@ -9,4 +9,22 @@
       max-width: 850px;
     }
   }
+
+  &--portfolio-page,
+  &--affairs {
+    h2 {
+      +P {
+        max-width: 1200px;
+      }
+    }
+  }
+
+  &__text {
+    margin-bottom: 0;
+    padding-left: 45px;
+
+    &:last-child {
+      margin-bottom: 66px;
+    }
+  }
 }

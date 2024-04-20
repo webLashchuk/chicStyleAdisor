@@ -1,0 +1,44 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.service {
+  h2 {
+    margin-bottom: 35px;
+
+    +p {
+      max-width: 700px;
+      margin-bottom: 60px;
+      letter-spacing: 0.04em;
+    }
+  }
+}
+
+.service-article {
+  position: relative;
+
+  img {
+    width: 100%;
+    min-height: 352px;
+    margin-bottom: 65px;
+  }
+
+  h3 {
+    line-height: 1.4;
+  }
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__content {
+    padding-inline: 16px;
+
+    span {
+      font-weight: var(--fw-500);
+      padding-right: 5px;
+    }
+  }
+
+}

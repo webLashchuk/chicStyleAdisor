@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk" class="page">
+<include src="./html/_head.html" locals='{"title": "Blog"}'></include>
+
+<body class="page__body">
+  <div class="site-container">
+
+    <include src="./html/_header.html" locals='{"page": "blog"}'></include>
+
+    <main class="main">
+
+      <include src="./html/_hero.html">
+        {
+        "addClass":"hero--blog",
+        "addOverlay":"overlay overlay--blog",
+        "image":"blog/hero.jpg",
+        "text":"Elevate Your Style with Sharlotte Sinclair",
+        "titleNormal":"Discover Style Stories",
+        "titleItalic":"",
+        "btnClass":"hide",
+        "addLink":"btn--hero"
+        }
+      </include>
+
+      <include src="./html/_blog.html">
+        {
+        "title":"Your Fashion Journey Begins Here",
+        "text":"Unveil the Latest Trends, Tips, and Tales of Fashion Exploration"
+        }
+      </include>
+
+      <include src="./html/_contact.html"></include>
+
+    </main>
+
+    <include src="./html/_footer.html"></include>
+
+  </div>
+</body>
+
+</html>

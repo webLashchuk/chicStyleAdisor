@@ -1,0 +1,75 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.gallery {
+  &.section {
+    padding-block: 64px 128px;
+  }
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  .container {
+    overflow: hidden;
+    padding-inline: 45px;
+    max-width: 1400px;
+  }
+}
+
+.gallery-slider {
+  position: relative;
+  overflow: visible;
+
+  &__slide {
+    max-width: 625px;
+    min-height: 840px;
+  }
+
+  h3,
+  p {
+    padding-inline: 15px;
+  }
+
+  img {
+    height: 100%;
+    user-select: none;
+    margin-bottom: 60px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background-color: rgba(0, 0, 0, .7);
+    top: auto;
+    backdrop-filter: blur(5px);
+    border-radius: calc(var(--radius-main) * 8 - 4px);
+    top: 400px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background-image: var(--arrow);
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+    }
+  }
+
+  .swiper-button-next {
+    right: -20px;
+  }
+
+  .swiper-button-prev {
+    left: -20px;
+
+    &::before {
+      content: "";
+      transform: translateY(-50%) translateX(-50%) rotate(180deg);
+    }
+  }
+}
