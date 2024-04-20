@@ -31,15 +31,11 @@
         padding-block: calc(var(--header-height) * 1.2) 20px;
         width: 100%;
         height: calc(var(--vh));
-        background-color: var(--color-yellow-100);
+        background-color: var(--color-dark);
         transform: translateX(150%);
         transition-property: transform;
         transition-duration: 0.4s;
       }
-    }
-
-    .header--dark & {
-      background-color: var(--color-brown-900);
     }
   }
 
@@ -103,6 +99,10 @@
 
     .btn--user {
       margin-right: 20px;
+
+      @include media(mobile-m) {
+        margin: 0;
+      }
     }
 
     @include media(tablet) {

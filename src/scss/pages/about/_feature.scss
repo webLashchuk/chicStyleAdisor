@@ -6,11 +6,28 @@
   p,
   h2 {
     padding: 0;
+
+    +p {
+      margin-bottom: 0;
+    }
+  }
+
+  h2 {
+    margin-bottom: 65px;
+
+    @include media(tablet) {
+      margin-bottom: 15px;
+    }
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
+    gap: 30px;
+
+    @include media(tablet) {
+      flex-direction: column;
+    }
 
     &--reverse {
       img {
@@ -19,27 +36,69 @@
 
       h2 {
         width: 100%;
-        text-align: right;
       }
 
       .feature__content {
         order: 2;
+      }
+
+      h2,
+      .feature__content {
         text-align: right;
+
+        @include media(tablet) {
+          text-align: left;
+        }
+      }
+
+      @include media(tablet) {
+        flex-direction: column-reverse;
       }
     }
 
+
     &:not(:last-child) {
       margin-bottom: 128px;
+
+      @include media(tablet) {
+        margin-bottom: 50px;
+      }
     }
   }
 
   &__content {
-    max-width: 620px;
+    max-width: 650px;
+    padding-left: 45px;
+    padding-top: 85px;
+
+    @include media(tablet-wide) {
+      max-width: 520px;
+    }
+
+    @include media(tablet) {
+      max-width: 100%;
+      padding-left: 0;
+      padding-top: 0;
+    }
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
   }
 
   img {
-    max-width: 560px;
+    max-width: 600px;
     width: 100%;
+    object-fit: cover;
+    object-position: top;
     min-height: 700px;
+
+    @include media(tablet) {
+      max-width: 100%;
+      min-height: auto;
+      height: 500px;
+    }
   }
 }

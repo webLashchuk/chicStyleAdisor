@@ -1,0 +1,26 @@
+@use "../../utils/functions/"as*;
+@use "../../utils/mixins/"as*;
+
+.gallery {
+  &.section {
+    padding-block: 64px 128px;
+
+    @include media(tablet) {
+      padding-block: rem(50);
+    }
+  }
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  .container {
+    overflow: hidden;
+    padding-inline: 45px;
+    max-width: 1400px;
+
+    @include media(tablet) {
+      padding-inline: 20px;
+    }
+  }
+}

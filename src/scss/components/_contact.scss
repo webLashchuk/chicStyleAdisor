@@ -22,6 +22,11 @@
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    gap: 40px;
+
+    @include media(tablet) {
+      flex-wrap: wrap;
+    }
   }
 
   &__inner {
@@ -29,6 +34,10 @@
     max-width: 490px;
     z-index: 1;
     font-size: 20px;
+
+    @include media(tablet) {
+      max-width: 100%;
+    }
   }
 
   h2 {
@@ -100,10 +109,15 @@
   &__form {
     max-width: 600px;
     padding: 40px;
-    width: 100%;
     background-color: var(--color-white);
+    width: 100%;
     z-index: 1;
     line-height: 1;
+
+    @include media(mobile-l) {
+      padding: 40px 20px;
+      max-width: 100%;
+    }
   }
 
   &__label {
@@ -113,6 +127,10 @@
     &--short {
       max-width: 250px;
       width: 100%;
+
+      @include media(mobile-l) {
+        max-width: 100%;
+      }
     }
 
     &:not(:last-of-type) {
@@ -155,5 +173,9 @@
   .btn {
     margin: 0 auto;
     font-size: 24px;
+
+    @include media(mobile-m) {
+      font-size: 16px;
+    }
   }
 }

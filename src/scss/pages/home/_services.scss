@@ -6,11 +6,24 @@
     font-size: 32px;
     line-height: 1.37;
     margin-bottom: 15px;
+
+    @include media(tablet) {
+      font-size: 28px;
+    }
+
+    @include media(mobile-l) {
+      font-size: 20px;
+    }
   }
 
   .grid__item {
     position: relative;
     padding-left: 96px;
+
+    @include media(mobile-l) {
+      padding-left: 0;
+      padding-top: 76px;
+    }
 
     &::before {
       content: "";
@@ -20,6 +33,11 @@
       height: 64px;
       top: 0;
       left: 0;
+
+      @include media(mobile-l) {
+        width: 54px;
+        height: 54px;
+      }
     }
 
     &--consultation {
@@ -56,5 +74,9 @@
     font-size: 24px;
     letter-spacing: 0.01em;
     margin-bottom: 17px;
+
+    @include media(mobile-m) {
+      font-size: 16px;
+    }
   }
 }

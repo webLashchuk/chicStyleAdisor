@@ -7,12 +7,39 @@ const swiperPortfolio = new Swiper('.portfolio-slider', {
   slidesPerView: 1,
   pagination: {
     clickable: true,
-    el: '.swiper-pagination',
+    el: '.portfolio-slider__pagination',
   },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  autoHeight: true,
+  draggable: true,
+  grabCursor: true,
+  breakpoints: {
+    320: {
+    },
+    768: {
+    },
+    991: {
+    },
+  },
+});
+
+const swiperAffairs = new Swiper('.affairs-slider', {
+  spaceBetween: 20,
+
+  modules: [Navigation, Pagination],
+  slidesPerView: 1,
+  pagination: {
+    clickable: true,
+    el: '.affairs-slider__pagination',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  autoHeight: true,
   draggable: true,
   grabCursor: true,
   breakpoints: {
@@ -32,7 +59,7 @@ const swiperBlog = new Swiper('.blog-slider', {
   slidesPerView: 1,
   pagination: {
     clickable: true,
-    el: '.swiper-pagination',
+    el: '.blog-slider__pagination',
   },
   navigation: {
     nextEl: '.swiper-button-next',
@@ -58,7 +85,7 @@ const swiperStyle = new Swiper('.style-slider', {
   modules: [Navigation, Pagination],
   pagination: {
     clickable: true,
-    el: '.swiper-pagination',
+    el: '.style-slider__pagination',
   },
   navigation: {
     nextEl: '.swiper-button-next',
@@ -77,15 +104,13 @@ const swiperStyle = new Swiper('.style-slider', {
 });
 
 const swiperGalleryImg = new Swiper('.gallery-slider', {
-  slidesPerView: 2,
-  spaceBetween: 64,
+
   initialSlide: 1,
-  slidesPerGroup: 2,
 
   modules: [Navigation, Pagination],
   pagination: {
     clickable: true,
-    el: '.swiper-pagination',
+    el: '.gallery-slider__pagination',
   },
   navigation: {
     nextEl: '.swiper-button-next',
@@ -95,10 +120,21 @@ const swiperGalleryImg = new Swiper('.gallery-slider', {
   grabCursor: true,
   breakpoints: {
     320: {
+      spaceBetween: 20,
+      slidesPerGroup: 1,
+      slidesPerView: 1,
+    },
+    576: {
+      slidesPerGroup: 2,
+      slidesPerView: 2,
+      spaceBetween: 20,
     },
     768: {
     },
     991: {
+      slidesPerGroup: 2,
+      slidesPerView: 2,
+      spaceBetween: 64,
     },
   },
 });

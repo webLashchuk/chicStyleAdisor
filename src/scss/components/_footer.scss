@@ -34,5 +34,41 @@
 
   &__wrapper {
     @include flex-all-sb;
+    gap: 20px;
+
+    @include media(mobile-l) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  .nav__inner {
+    gap: 20px;
+
+    @include media(mobile-l) {
+      flex-direction: column;
+    }
+  }
+
+  .nav__list {
+
+    @include media(tablet) {
+      gap: 20px;
+      flex-wrap: wrap;
+      max-width: 450px;
+      justify-content: flex-end;
+      margin: 0;
+      margin-left: auto;
+    }
+
+    @include media(mobile-l) {
+      margin: 0 auto;
+      justify-content: center;
+    }
+  }
+
+  .logo {
+    @include media(mobile-l) {
+      max-width: 200px;
+    }
   }
 }

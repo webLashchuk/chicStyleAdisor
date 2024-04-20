@@ -42,5 +42,9 @@
     font-family: "Playfair Display", sans-serif;
     line-height: 1;
     font-weight: var(--fw-500);
+
+    @include media(tablet) {
+      font-size: 70px;
+    }
   }
 }

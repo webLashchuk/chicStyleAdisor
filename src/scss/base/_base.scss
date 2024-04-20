@@ -82,10 +82,18 @@ body {
   padding-block: rem(65);
 
   @include media(tablet) {
-    padding-block: rem(60);
+    padding-block: rem(50);
   }
 }
 
 .hide {
   display: none;
+}
+
+.main--top {
+  padding-top: 100px;
+
+  @include media(tablet) {
+    padding-top: 70px;
+  }
 }

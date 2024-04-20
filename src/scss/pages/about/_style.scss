@@ -4,6 +4,10 @@
 .style {
   &__wrapper {
     display: flex;
+
+    @include media(tablet) {
+      flex-direction: column-reverse;
+    }
   }
 
   h2,
@@ -13,6 +17,10 @@
 
   h2 {
     padding-bottom: 50px;
+
+    @include media(tablet) {
+      padding-bottom: 15px;
+    }
   }
 
   p {
@@ -24,33 +32,68 @@
   &__content {
     padding-block: 85px;
     max-width: 600px;
+
+    @include media(tablet-wide) {
+      max-width: 500px;
+      padding-block: 65px;
+    }
+
+    @include media(tablet) {
+      max-width: 100%;
+      padding-block: 35px;
+    }
   }
 
   &__inner {
     padding-inline: 50px;
-  }
 
-  img {
-    object-fit: cover;
+    @include media(tablet-wide) {
+      padding-inline: 25px;
+    }
   }
 
   &__images {
     display: flex;
+    gap: 32px;
+
+    @include media(mobile-m) {
+      flex-wrap: wrap;
+    }
 
     img {
       max-width: 300px;
       height: 300px;
+      object-fit: cover;
 
-      &:not(:last-child) {
-        margin-right: 32px;
+      @include media(tablet-wide) {
+        max-width: 250px;
       }
+
+      @include media(mobile-m) {
+        max-width: 100%;
+        width: 100%;
+
+      }
+
     }
+
   }
 
-  &__image-big {
+  &__image {
+    max-width: 600px;
+    min-height: 965px;
+
+    @include media(tablet) {
+      max-width: 100%;
+      min-height: auto;
+      height: 400px;
+    }
+
     img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
+
 }

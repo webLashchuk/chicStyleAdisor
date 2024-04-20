@@ -4,6 +4,10 @@
 .article {
   padding-top: 160px;
 
+  @include media(tablet) {
+    padding-top: 100px;
+  }
+
   .container {
     max-width: 1246px;
   }
@@ -16,6 +20,14 @@
     font-family: var(--font-family-secondary);
     font-size: 52px;
     margin-bottom: 25px;
+
+    @include media(tablet) {
+      font-size: 38px;
+    }
+
+    @include media(mobile-s) {
+      font-size: 32px;
+    }
 
     +p {
       margin-bottom: 30px;
@@ -35,6 +47,11 @@
     padding-left: 54px;
     margin-bottom: 60px;
 
+    @include media(tablet) {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
     &::before {
       @include pseudo;
       top: 50%;
@@ -50,15 +67,31 @@
   img {
     min-height: 728px;
     width: 100%;
+
+    @include media(tablet) {
+      min-height: 400px;
+    }
   }
 
   h2 {
     margin-bottom: 32px;
     padding: 0;
+
+    @include media(tablet) {
+      font-size: 28px;
+    }
+
+    @include media(mobile-s) {
+      font-size: 24px;
+    }
   }
 
   &__list {
     padding-left: 30px;
+
+    @include media(mobile-s) {
+      padding-left: 15px;
+    }
   }
 
   &__item {
@@ -67,6 +100,10 @@
     margin-bottom: 35px;
     list-style-position: outside;
     list-style-type: decimal;
+
+    @include media(mobile-l) {
+      font-size: 16px;
+    }
   }
 
   &__content {

@@ -23,53 +23,66 @@
   &[data-items="1"] {
     --column: 2;
     max-width: 955px;
-    gap: 67px 120px;
+    gap: 67px 100px;
     justify-content: space-between;
     margin: 0 auto;
-
-    grid-template-columns: repeat(var(--column), 430px);
+    grid-template-columns: repeat(2, minmax(300, 430px));
 
     @include media(tablet) {
-      --column: 2;
+      gap: 50px;
     }
 
-    @include media(mobile-m) {
-      --column: 1;
+    @include media(mobile-l) {
+      grid-template-columns: 1fr;
     }
   }
 
-  &[data-items="2"] {
+  &[data-items="2"],
+  &[data-items="5"] {
     --column: 3;
     gap: 25px;
-
     grid-template-columns: repeat(var(--column), 1fr);
 
     @include media(tablet) {
       --column: 2;
+
+      .grid__item {
+        &:nth-child(3) {
+          grid-column: span 2;
+        }
+      }
     }
 
     @include media(mobile-m) {
       --column: 1;
+
+      .grid__item {
+        &:nth-child(3) {
+          grid-column: auto;
+        }
+      }
     }
   }
 
   &[data-items="3"] {
     --column: 2;
     gap: 185px 65px;
-
     grid-template-columns: repeat(var(--column), 1fr);
 
-    @include media(tablet) {
-      --column: 2;
+    @include media(tablet-wide) {
+      gap: 130px 65px;
     }
 
-    @include media(mobile-m) {
+    @include media(tablet) {
+      gap: 100px 30px;
+    }
+
+    @include media(mobile-l) {
       --column: 1;
     }
   }
 
   &[data-items="4"] {
-    --column: 3;
     max-width: 1140px;
     margin: 0 auto;
     gap: 40px;
@@ -80,11 +93,27 @@
     justify-items: center;
 
     @include media(tablet) {
-      --column: 2;
+      grid-template-columns: 1fr 3fr 1fr;
     }
 
-    @include media(mobile-m) {
-      --column: 1;
+    @include media(mobile-l) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 2fr 1.75fr;
+
+      .grid__item {
+        &:nth-child(2) {
+          grid-column: span 2;
+          grid-row: 1/2;
+        }
+      }
     }
+
+    @include media(mobile-s) {
+      gap: 0 40px;
+    }
+  }
+
+  &[data-items="5"] {
+    margin-bottom: 30px;
   }
 }

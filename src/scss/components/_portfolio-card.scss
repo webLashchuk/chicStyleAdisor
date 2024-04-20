@@ -8,23 +8,41 @@
   h3 {
     font-size: 30px;
     margin: 0 auto 30px;
+
+    @include media(mobile-l) {
+  font-size: 20px;
+  margin: 0 auto 10px;
+}
   }
 
   p {
     font-size: 18px;
     line-height: 1.65;
+
+    @include media(mobile-l) {
+      font-size: 16px;
+    }
   }
 
   p,
   h3 {
     color: var(--color-white);
     text-align: center;
+
+    @include media(tablet) {
+      text-align: left;
+    }
   }
 
   img {
     width: 100%;
     min-height: 728px;
     object-fit: cover;
+
+    @include media(tablet-wide) {
+      min-height: auto;
+      height: 100%;
+    }
   }
 
   &__content {
@@ -36,6 +54,20 @@
     padding: 32px;
     overflow: hidden;
     border-radius: calc(var(--radius-main) - 4px);
+
+    @include media(tablet) {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      max-width: 100%;
+      width: 100%;
+      padding: 15px;
+      transform: translateX(0%);
+      border-radius: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
 
     &:before {
       content: "";

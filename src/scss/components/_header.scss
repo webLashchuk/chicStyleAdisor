@@ -46,11 +46,3 @@
     }
   }
 }
-
-.scroll {
-  padding: 10px 30px;
-
-  @include media(tablet-wide) {
-    padding: 15px;
-  }
-}

@@ -1,0 +1,24 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.gallery-slider__pagination,
+.portfolio-slider__pagination,
+.affairs-slider__pagination,
+.blog-slider__pagination {
+  display: none;
+
+
+  @include media(tablet) {
+    @include flex-h-center;
+  }
+
+  .swiper-pagination-bullet {
+    width: 25px;
+    height: 10px;
+    border-radius: 0;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: var(--color-black);
+  }
+}
