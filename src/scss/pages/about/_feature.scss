@@ -21,8 +21,7 @@
   }
 
   &__inner {
-    display: flex;
-    justify-content: space-between;
+    @include flex-sb;
     gap: 30px;
 
     @include media(tablet) {

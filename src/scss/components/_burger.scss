@@ -38,8 +38,7 @@
 
     &::before,
     &::after {
-      content: "";
-      position: absolute;
+      @include pseudo;
       left: 0;
       width: 100%;
       height: var(--line-height);
