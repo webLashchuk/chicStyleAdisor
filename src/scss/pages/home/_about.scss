@@ -2,7 +2,9 @@
 @use "../../utils/mixins/"as*;
 
 .about {
+
   &__inner {
+    position: relative;
     position: relative;
     display: flex;
     justify-items: flex-end;
@@ -11,17 +13,36 @@
     background-repeat: no-repeat;
     background-size: contain;
     min-height: 967px;
+    padding-top: 210px;
 
-    @include media(mobile-s) {
-      background-position: bottom center;
+    &::after {
+      @include pseudo;
+      max-width: 910px;
+      width: 100%;
+      top: 5px;
+      right: 10;
+      min-height: 205px;
+      z-index: -1;
+      @include cover-background;
+      background-image: url('../images/home/charlotte-sinclair.svg')
     }
 
+
+
     @include media(tablet-wide) {
+      padding-top: 180px;
+
       &::before {
         @include pseudo;
         background-color: rgba(255, 255, 255, .6);
         inset: 0;
         z-index: 1;
+      }
+
+      &::after {
+        @include contain-background;
+        max-width: 710px;
+        min-height: 160px;
       }
     }
 
@@ -35,6 +56,24 @@
 
     @include media(mobile-l) {
       min-height: 567px;
+      padding-top: 100px;
+
+      &::after {
+        max-width: 400px;
+        min-height: 90px;
+      }
+    }
+
+    @include media(mobile-s) {
+      background-position: bottom center;
+      padding-top: 70px;
+
+      &::after {
+        right: auto;
+        left: 15px;
+        max-width: 300px;
+        min-height: 50px;
+      }
     }
   }
 
@@ -43,7 +82,7 @@
     text-align: right;
     flex-direction: column;
     align-items: flex-end;
-    max-width: 660px;
+    max-width: 650px;
     margin-left: auto;
     padding-inline: 48px;
     margin-bottom: 32px;
@@ -57,57 +96,14 @@
     }
   }
 
-  span {
-    text-align: right;
-    color: var(--color-gray);
-    display: inline-block;
-    font-family: "Kally dreams", sans-serif;
-    font-size: 128px;
-    margin-bottom: 20px;
-    z-index: -1;
-
-    @include media(tablet) {
-      font-size: 100px;
-    }
-
-    @include media(mobile-l) {
-      font-size: 70px;
-    }
-
-    @include media(mobile-m) {
-      text-align: left;
-      padding-left: 15px;
-      font-size: 50px;
-      z-index: 1;
-    }
-
-    @include media(mobile-s) {
-      font-size: 20px;
-    }
-  }
-
   h2 {
     text-align: right;
     margin-bottom: 32px;
   }
 
   p {
-    letter-spacing: 0.025em;
+    letter-spacing: 0.03em;
     margin-bottom: 33px;
-  }
-
-  &--about-me {
-    span {
-      margin-bottom: 45px;
-    }
-
-    h2 {
-      margin-bottom: 60px;
-    }
-
-    .about__content {
-      max-width: 710px;
-    }
   }
 
   .container {

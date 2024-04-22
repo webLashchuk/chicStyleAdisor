@@ -10,9 +10,9 @@
     margin: 0 auto 30px;
 
     @include media(mobile-l) {
-  font-size: 20px;
-  margin: 0 auto 10px;
-}
+      font-size: 20px;
+      margin: 0 auto 10px;
+    }
   }
 
   p {
@@ -36,7 +36,7 @@
 
   img {
     width: 100%;
-    min-height: 728px;
+    max-height: 728px;
     object-fit: cover;
 
     @include media(tablet-wide) {

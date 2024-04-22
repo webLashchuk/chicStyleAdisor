@@ -10,7 +10,7 @@
   &__inner {
     @include flex-all-sb;
     width: 100%;
-    padding-block: 11px 9px;
+    padding-block: 7px 7px;
 
     @include media(tablet) {
       .logo--header {
@@ -77,13 +77,16 @@
     font-size: 18px;
     white-space: nowrap;
     text-transform: uppercase;
-    color: var(--color-dark-450);
     background-color: transparent;
     border-bottom: 1px solid transparent;
     transition: color .2s;
 
     &:hover {
       color: var(--color-gray);
+
+      @include media(tablet) {
+        color: inherit;
+      }
     }
   }
 

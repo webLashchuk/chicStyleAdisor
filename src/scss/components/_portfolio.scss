@@ -4,16 +4,26 @@
 .portfolio {
   h2 {
     margin-bottom: 32px;
+    padding-left: 45px;
 
-    +P {
+    @include media(tablet) {
+      padding-left: 0;
+    }
+
+    +p {
       max-width: 850px;
+      padding-left: 45px;
+
+      @include media(tablet) {
+        padding-left: 0;
+      }
     }
   }
 
   &--portfolio-page,
   &--affairs {
     h2 {
-      +P {
+      +p {
         max-width: 1200px;
       }
     }
@@ -22,6 +32,10 @@
   &__text {
     margin-bottom: 0;
     padding-left: 45px;
+
+    @include media(tablet) {
+      padding-left: 0;
+    }
 
     &:last-child {
       margin-bottom: 66px;

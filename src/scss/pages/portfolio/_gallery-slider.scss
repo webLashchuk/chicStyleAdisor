@@ -13,7 +13,7 @@
 
   &__slide {
     max-width: 625px;
-    min-height: 840px;
+    max-height: 840px;
   }
 
   h3,
@@ -30,6 +30,7 @@
   }
 
   img {
+    max-height: 840px;
     height: 100%;
     user-select: none;
     margin-bottom: 60px;
@@ -39,17 +40,10 @@
   .swiper-button-prev {
     @include slider-buttons;
     background-color: rgba(0, 0, 0, .7);
-    top: 400px;
+    top: 50%;
+    transform: translateY(-50%);
 
     @include media(tablet) {
-      top: 30%;
-    }
-
-    @include media(mobile-l) {
-      top: 25%;
-    }
-
-    @include media(mobile-m) {
       display: none;
     }
 

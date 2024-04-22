@@ -4,9 +4,19 @@
 .blog {
   h2 {
     margin-bottom: 32px;
+    padding-left: 45px;
 
-    +P {
+    @include media(tablet) {
+      padding-left: 0;
+    }
+
+    +p {
       max-width: 1265px;
+      padding-left: 45px;
+
+      @include media(tablet) {
+        padding-left: 0;
+      }
     }
   }
 }

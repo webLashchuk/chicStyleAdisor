@@ -3,12 +3,22 @@
 
 .service {
   h2 {
+    padding-left: 45px;
     margin-bottom: 35px;
+
+    @include media(tablet) {
+      padding-left: 0;
+    }
 
     +p {
       max-width: 700px;
       margin-bottom: 60px;
       letter-spacing: 0.04em;
+      padding-left: 45px;
+
+      @include media(tablet) {
+        padding-left: 0;
+      }
     }
   }
 }

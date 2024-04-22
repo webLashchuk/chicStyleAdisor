@@ -40,7 +40,7 @@
   &[data-items="2"],
   &[data-items="5"] {
     --column: 3;
-    gap: 25px;
+    gap: 35px;
     grid-template-columns: repeat(var(--column), 1fr);
 
     @include media(tablet) {

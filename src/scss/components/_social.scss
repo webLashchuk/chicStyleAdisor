@@ -13,30 +13,46 @@
     display: inline-block;
     width: 24px;
     height: 24px;
-    @include contain-background;
+
+    &::before {
+      @include pseudo;
+      @include contain-background;
+      inset: 0;
+    }
 
     &--facebook {
-      background-image: var(--facebook);
+      &::before {
+        background-image: var(--facebook);
+      }
 
     }
 
     &--twitter {
-      background-image: var(--twitter);
+      &::before {
+        background-image: var(--twitter);
+      }
 
     }
 
     &--instagram {
-      background-image: var(--instagram);
+      &::before {
+        background-image: var(--instagram);
+      }
 
     }
 
     &--pinterest {
-      background-image: var(--pinterest);
+      &::before {
+        background-image: var(--pinterest);
+      }
 
     }
 
     &--linkedin {
-      background-image: var(--linkedin);
+      &::before {
+        inset: 0;
+        background-image: var(--linkedin);
+      }
 
     }
   }

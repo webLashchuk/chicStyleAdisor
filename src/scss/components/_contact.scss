@@ -5,7 +5,7 @@
   &__top {
     position: relative;
     @include cover-background;
-    padding-block: 95px 90px;
+    padding-block: 90px;
 
     &.overlay {
       &::before {
@@ -40,16 +40,11 @@
   }
 
   h2 {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 
     +p {
       margin-bottom: 67px;
     }
-  }
-
-  h2,
-  p {
-    padding: 0;
   }
 
   p,
@@ -59,6 +54,10 @@
 
   a {
     font-weight: var(--fw-500);
+
+    @include media(mobile-m) {
+      font-size: 16px;
+    }
   }
 
   span {
@@ -113,6 +112,10 @@
     z-index: 1;
     line-height: 1;
 
+    @include media(tablet) {
+      margin: 0 auto;
+    }
+
     @include media(mobile-l) {
       padding: 40px 20px;
       max-width: 100%;
@@ -133,7 +136,7 @@
     }
 
     &:not(:last-of-type) {
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
     &:nth-child(3) {
@@ -141,7 +144,7 @@
     }
 
     &:last-of-type {
-      margin-bottom: 35px;
+      margin-bottom: 40px;
     }
   }
 
@@ -150,12 +153,14 @@
     width: 100%;
     border: none;
     border-bottom: 2px solid var(--color-black);
-    padding-block: 8px 10px;
+    padding-block: 12px 11px;
 
     &::placeholder {
       font-weight: var(--fw-500);
       color: var(--color-black);
       font-size: 20px;
+      line-height: 1;
+      text-transform: uppercase;
     }
   }
 

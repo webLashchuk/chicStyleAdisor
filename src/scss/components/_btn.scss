@@ -30,13 +30,17 @@
 
     @include media(tablet) {
       color: var(--color-white) !important;
-      background-color: transparent;
+      background-color: transparent !important;
     }
   }
 
   &--user {
     &:hover {
       background-color: var(--color-white) !important;
+
+      @include media(tablet) {
+        background-color: transparent !important;
+      }
     }
   }
 
@@ -49,6 +53,11 @@
     &:hover {
       color: var(--color-white) !important;
       background-color: var(--color-black) !important;
+
+      @include media(tablet) {
+        color: var(--color-black) !important;
+        background-color: var(--color-white) !important;
+      }
     }
   }
 
@@ -58,12 +67,21 @@
 
     &:hover {
       background-color: var(--color-white) !important;
+
+      @include media(tablet) {
+        background-color: transparent !important;
+        color: var(--color-white) !important;
+      }
     }
   }
 
   &--order {
     &:hover {
       background-color: transparent !important;
+
+      @include media(tablet) {
+        background-color: var(--color-white) !important;
+      }
     }
   }
 
@@ -73,6 +91,11 @@
 
     &:hover {
       background-color: var(--color-black) !important;
+
+      @include media(tablet) {
+        border-color: var(--color-black) !important;
+        background-color: var(--color-white) !important;
+      }
     }
 
     @include media(mobile-m) {
@@ -87,10 +110,12 @@
     &:hover {
       background-color: var(--color-white) !important;
       color: var(--color-black) !important;
-    }
-  }
 
-  &.hide {
-    display: none;
+      @include media(tablet) {
+        background-color: var(--color-black) !important;
+        border-color: var(--color-black) !important;
+        color: var(--color-white) !important;
+      }
+    }
   }
 }

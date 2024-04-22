@@ -125,11 +125,8 @@ const swiperGalleryImg = new Swiper('.gallery-slider', {
       slidesPerView: 1,
     },
     576: {
-      slidesPerGroup: 2,
       slidesPerView: 2,
       spaceBetween: 20,
-    },
-    768: {
     },
     991: {
       slidesPerGroup: 2,

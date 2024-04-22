@@ -16,7 +16,7 @@
   transition-duration: 0.15s;
 
   @include media(tablet-wide) {
-    padding: 15px;
+    padding-block: 15px;
   }
 
   .true {
@@ -44,5 +44,9 @@
         margin-right: auto;
       }
     }
+  }
+
+  &.hide {
+    transform: translateY(calc(-100% - 30px));
   }
 }

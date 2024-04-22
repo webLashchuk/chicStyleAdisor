@@ -6,7 +6,7 @@
   background-color: var(--color-dark);
 
   &__top {
-    padding-block: 33px;
+    padding-block: 37px;
   }
 
   .copyright {
@@ -22,13 +22,17 @@
 
   &__bottom {
     background-color: var(--color-black);
-    padding-block: 30px;
+    padding-block: 27px;
 
     p {
       color: var(--color-white);
       font-family: "Inter", sans-serif;
       font-size: 16px;
       letter-spacing: 0;
+    }
+
+    span {
+      text-transform: uppercase;
     }
   }
 
